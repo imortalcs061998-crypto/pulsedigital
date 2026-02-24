@@ -3,9 +3,9 @@ import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const ParticleGrid = () => (
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute inset-0 grid-bg animate-grid-move opacity-60" />
-    {Array.from({ length: 30 }).map((_, i) => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 grid-bg animate-grid-move opacity-40" />
+    {Array.from({ length: 15 }).map((_, i) => (
       <motion.div
         key={i}
         className="absolute w-1 h-1 rounded-full bg-primary/40"
@@ -18,7 +18,7 @@ const ParticleGrid = () => (
           scale: [1, 1.5, 1],
         }}
         transition={{
-          duration: 3 + Math.random() * 3,
+          duration: 4 + Math.random() * 3,
           repeat: Infinity,
           delay: Math.random() * 2,
         }}
@@ -30,28 +30,34 @@ const ParticleGrid = () => (
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0">
         <img
-  src={heroBg}
-  alt="PulseDigital hero background"
-  className="
-    w-full h-full
-    object-cover
-    object-center
-    md:object-[60%_center]
-    opacity-60
-  "
-/>
-/>
+          src={heroBg}
+          alt="PulseDigital hero background"
+          className="
+            w-full h-full
+            object-cover
+            object-center
+            md:object-[60%_center]
+            opacity-60
+          "
+        />
 
-<div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/80" />
+        {/* Overlay principal */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/80" />
+
+        {/* Fade inferior para esconder o fim da imagem */}
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-background pointer-events-none" />
       </div>
 
       <ParticleGrid />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center pt-20">
+      {/* CONTENT */}
+      <div className="relative z-10 container mx-auto px-6 pt-24 text-center">
+        {/* Glass focus layer */}
+        <div className="absolute inset-0 -z-10 bg-background/40 backdrop-blur-[6px] rounded-3xl" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,17 +65,26 @@ const HeroSection = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-          <span className="text-sm text-primary font-medium">Desenvolvimento de Tecnologia de Alto Nível</span>
+          <span className="text-sm text-primary font-medium">
+            Desenvolvimento de Tecnologia de Alto Nível
+          </span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight max-w-5xl mx-auto mb-6"
+          className="
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+            font-heading font-bold leading-tight
+            max-w-5xl mx-auto mb-6
+            drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)]
+          "
         >
           Transformamos ideias ambiciosas em{" "}
-          <span className="gradient-text glow-text-blue">tecnologias escaláveis.</span>
+          <span className="gradient-text glow-text-blue">
+            tecnologias escaláveis.
+          </span>
         </motion.h1>
 
         <motion.p
@@ -78,7 +93,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Sites, aplicativos, automações e softwares desenvolvidos com No Code, Low Code e Vibe Code.
+          Sites, aplicativos, automações e softwares desenvolvidos com No Code,
+          Low Code e Vibe Code.
         </motion.p>
 
         <motion.div
@@ -96,6 +112,7 @@ const HeroSection = () => {
             Agendar Reunião Estratégica
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
+
           <a
             href="#portfolio"
             className="px-8 py-4 rounded-lg border border-border text-foreground font-semibold text-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 flex items-center gap-2"
@@ -110,7 +127,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
