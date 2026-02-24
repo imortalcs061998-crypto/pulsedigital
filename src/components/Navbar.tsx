@@ -46,7 +46,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#cta"
+            href="https://wa.me/5549999458323"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:glow-blue transition-all duration-300"
           >
             Agendar Reunião
@@ -82,7 +84,9 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="#cta"
+                href="https://wa.me/5549999458323"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-semibold text-sm text-center mt-2"
               >

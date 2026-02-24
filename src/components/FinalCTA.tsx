@@ -46,7 +46,7 @@ const FinalCTA = () => {
         </motion.p>
 
         <motion.a
-          href="https://wa.me/5500000000000"
+          href="https://wa.me/5549999458323"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 30 }}
