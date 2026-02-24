@@ -19,10 +19,10 @@ const FounderSection = () => {
             className="relative flex-shrink-0"
           >
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden glow-blue">
-              <img
+               <img
                 src={founderImg}
                 alt="Cleiton dos Santos - Fundador da PulseDigital"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
               {/* Scan line effect */}
               <div className="absolute inset-0 scan-line pointer-events-none" />
