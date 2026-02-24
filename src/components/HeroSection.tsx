@@ -39,8 +39,10 @@ const HeroSection = () => {
     w-full h-full
     object-cover
     object-center
+    md:object-[60%_center]
     opacity-60
   "
+/>
 />
 
 <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/80" />
