@@ -16,14 +16,14 @@ const FounderSection = () => {
             initial={{ opacity: 0, x: -60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative flex-shrink-0"
-          >
+            className="relative flex-shrink-0">
+
             <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden glow-blue">
                <img
                 src={founderImg}
                 alt="Cleiton dos Santos - Fundador da PulseDigital"
-                className="w-full h-full object-cover object-top"
-              />
+                className="w-full h-full object-cover object-top" />
+
               {/* Scan line effect */}
               <div className="absolute inset-0 scan-line pointer-events-none" />
               {/* Border glow */}
@@ -38,9 +38,9 @@ const FounderSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Fundador</span>
+            transition={{ duration: 0.8, delay: 0.2 }}>
+
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase">Desenvolvedor</span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 mb-2">
               Cleiton dos Santos
             </h2>
@@ -49,15 +49,15 @@ const FounderSection = () => {
               Apaixonado por criar e desenvolver tecnologias. Especialista em No Code, Low Code e Vibe Code, 
               ajudando empresas e visionários a tirarem projetos do papel.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Com uma mentalidade focada em resultados e inovação, já ajudou dezenas de empresas a transformar 
-              ideias em soluções digitais escaláveis e lucrativas.
+            <p className="text-muted-foreground leading-relaxed"> Te ajudo a transformar ideias em soluções digitais escaláveis e lucrativas.
+
+
+
+
+
             </p>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
-};
-
+    </section>);};
 export default FounderSection;
