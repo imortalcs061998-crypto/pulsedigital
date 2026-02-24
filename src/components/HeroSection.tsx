@@ -29,8 +29,8 @@ const ParticleGrid = () => (
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* BACKGROUND */}
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
+      {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <img
           src={heroBg}
@@ -44,7 +44,7 @@ const HeroSection = () => {
           "
         />
 
-        {/* Overlay principal */}
+        {/* Overlay base */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/80" />
 
         {/* Fade inferior para esconder o fim da imagem */}
@@ -53,16 +53,16 @@ const HeroSection = () => {
 
       <ParticleGrid />
 
-      {/* CONTENT */}
-      <div className="relative z-10 container mx-auto px-6 pt-24 text-center">
-        {/* Glass focus layer */}
-        <div className="absolute inset-0 -z-10 bg-background/40 backdrop-blur-[6px] rounded-3xl" />
+      {/* 🔥 GLASS FULLSCREEN (100% da tela) */}
+      <div className="absolute inset-0 z-10 bg-background/35 backdrop-blur-[8px]" />
 
+      {/* CONTENT */}
+      <div className="relative z-20 container mx-auto px-6 pt-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
           <span className="text-sm text-primary font-medium">
