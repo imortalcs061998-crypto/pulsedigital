@@ -38,7 +38,7 @@ const HeroSection = () => {
   className="
     w-full h-full
     object-cover
-    object-left-top
+    object-center
     opacity-60
   "
 />
