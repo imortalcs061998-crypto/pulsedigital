@@ -35,7 +35,7 @@ const HeroSection = () => {
         <img
           src={heroBg}
           alt="PulseDigital hero background"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-40 md:object-center object-[center_30%] md:scale-100 scale-[0.7] origin-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
       </div>
@@ -80,7 +80,9 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#cta"
+            href="https://wa.me/5549999458323"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg hover:glow-blue transition-all duration-300 flex items-center gap-2"
           >
             Agendar Reunião Estratégica
@@ -100,7 +102,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
