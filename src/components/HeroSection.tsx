@@ -33,11 +33,17 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroBg}
-          alt="PulseDigital hero background"
-          className="w-full h-full object-cover opacity-40 md:object-center object-[center_30%] md:scale-100 scale-[0.7] origin-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+  src={heroBg}
+  alt="PulseDigital hero background"
+  className="
+    w-full h-full
+    object-cover
+    object-left-top
+    opacity-60
+  "
+/>
+
+<div className="absolute inset-0 bg-gradient-to-br from-background/70 via-background/40 to-background/80" />
       </div>
 
       <ParticleGrid />
